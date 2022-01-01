@@ -10,7 +10,7 @@ public class SearchAPI {
 
     @Step
     public String invoke_my_webservice() {
-        String webserviceEndpoint =  EnvironmentSpecificConfiguration.from(environmentVariables)
+        String webserviceEndpoint = EnvironmentSpecificConfiguration.from(environmentVariables)
                 .getProperty("api.base.endpoint");
         return webserviceEndpoint;
     }

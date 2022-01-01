@@ -24,7 +24,6 @@ import static net.serenitybdd.screenplay.rest.questions.ResponseConsequence.seeT
 
 public class SearchStepDefinitions {
 
-
     @Steps
     SearchAPI searchAPI;
 
@@ -36,7 +35,6 @@ public class SearchStepDefinitions {
     public void iOpenBrowserAndGoToTheMainPage() {
         actor.can(BrowseTheWeb.with(theBrowser));
         actor.wasAbleTo(NavigateTo.theAutomationPracticeHomePage());
-
     }
 
     @When("I search with {string} in the home page")
@@ -80,13 +78,12 @@ public class SearchStepDefinitions {
 
     @Then("I should see related results on the main page")
     public void iShouldSeeRelatedResultsOnTheMainPage() {
-
-        System.out.println("last response: "+SerenityRest.lastResponse().statusCode());
+        System.out.println("last response: " + SerenityRest.lastResponse().statusCode());
         List<String> resultList = SerenityRest.lastResponse().getBody().jsonPath().getList("");
-        System.out.println("resultList: "+resultList.size());
+        System.out.println("resultList: " + resultList.size());
         actor.attemptsTo(
                 Ensure.that(CurrentSearchResultCount.information())
-                        .contains(resultList.size() +" results have been found.")
+                        .contains(resultList.size() + " results have been found.")
         );
         try {
             Thread.sleep(10000);

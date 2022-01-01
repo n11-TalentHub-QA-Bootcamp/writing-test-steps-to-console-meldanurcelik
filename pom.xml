@@ -8,7 +8,6 @@
     <artifactId>E2ETAutomationPractice</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <serenity.version>3.1.5</serenity.version>
@@ -16,8 +15,8 @@
         <tags></tags>
         <webdriver.base.url></webdriver.base.url>
         <restapi.baseurl></restapi.baseurl>
-
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>net.serenity-bdd</groupId>
@@ -84,7 +83,13 @@
             <version>3.6.2</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>1.7.7</version>
+        </dependency>
     </dependencies>
+
     <build>
         <plugins>
             <plugin>
@@ -149,6 +154,5 @@
             </plugin>
         </plugins>
     </build>
-
 
 </project>

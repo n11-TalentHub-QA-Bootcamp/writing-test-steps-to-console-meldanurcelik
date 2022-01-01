@@ -1,6 +1,5 @@
 Feature: e2e test for search functionality.
 
-
   @KaanDoumgunucocugu
   Scenario: ui and api testing scenario for Search with known keyword
     Given I open browser and go to the main page
@@ -8,5 +7,3 @@ Feature: e2e test for search functionality.
     Then api endpoint should be called with "keyword"
     When api returned related results
     Then I should see related results on the main page
-
-

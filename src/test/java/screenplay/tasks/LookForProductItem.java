@@ -15,11 +15,11 @@ import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isClic
 
 public class LookForProductItem {
     public static Performable about(String term) {
-        return Task.where("{0} look for the "+ term,
+        return Task.where("{0} look for the " + term,
                 Click.on(SearchPageElements.SEARCH_FIELD),
                 //WaitUntil.the(SearchPageElements.SEARCH_FIELD, isClickable()),
                 SendKeys.of(term).into(SearchPageElements.SEARCH_FIELD)
-                //Enter.theValue(term).into(SearchPageElements.SEARCH_FIELD)
+                        //Enter.theValue(term).into(SearchPageElements.SEARCH_FIELD)
                         .thenHit(Keys.ENTER));
     }
 }

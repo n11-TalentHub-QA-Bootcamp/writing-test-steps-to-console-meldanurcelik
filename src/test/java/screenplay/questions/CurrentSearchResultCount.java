@@ -10,13 +10,13 @@ import static net.thucydides.core.webdriver.ThucydidesWebDriverSupport.getDriver
 
 public class CurrentSearchResultCount implements Question<String> {
 
-    public String answeredBy(Actor actor){
-
+    public String answeredBy(Actor actor) {
         WebDriver driver = getDriver();
         return driver.findElement(By.cssSelector(".heading-counter")).getText();
 
     }
-    public static CurrentSearchResultCount information(){
+
+    public static CurrentSearchResultCount information() {
         return new CurrentSearchResultCount();
     }
 
